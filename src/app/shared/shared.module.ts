@@ -16,11 +16,12 @@ import { MatchResultComponent } from './match-result/match-result.component';
     FlagComponent,
     MatchResultComponent
   ],
-  exports: [
-    FilterByGroupPipe,
-    MatchResultComponent,
-    GoalDiffPipe
-  ],
+    exports: [
+        FilterByGroupPipe,
+        MatchResultComponent,
+        GoalDiffPipe,
+        FlagComponent
+    ],
   imports: [
     CommonModule
   ]

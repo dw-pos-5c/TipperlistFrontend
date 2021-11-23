@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col">#</th>
+      <th class="col">Match</th>
+      <th class="col">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let match of matches">
+      <th scope="row">{{ match.id }}</th>
+      <td>
+        <app-flag [countryName]="match.team1Name"></app-flag>:<app-flag [countryName]="match.team2Name"></app-flag>
+      </td>
+      <td>
+        <input type="number" #team1>
+        :
+        <input type="number" #team2>
+      </td>
+      <td>
+        <app-bs-button groupName="Save" (selectionChanged)="save(match, +team1.value, +team2.value)"></app-bs-button>
+      </td>
+    </tr>
+  </tbody>
+</table>

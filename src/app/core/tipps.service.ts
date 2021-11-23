@@ -22,4 +22,8 @@ export class TippsService {
   getTipps(tipperId: number): Promise<TippDto> {
     return this.http.get<TippDto>(`${this.url}/Tips/Tipps/${tipperId}`).toPromise();
   }
+
+  updateMatchResult(matchId: number, match: MatchDto): Promise<MatchDto> {
+    return this.http.put<MatchDto>(`${this.url}/TipsAdmin/UpdateMatchResult/${matchId}`, match).toPromise();
+  }
 }

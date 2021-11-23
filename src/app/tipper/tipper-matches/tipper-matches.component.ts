@@ -30,10 +30,6 @@ export class TipperMatchesComponent implements OnInit {
     });
   }
 
-  findMatch(matchWithResultId: number): MatchDto {
-    return this.matches.find(x => x.id === matchWithResultId) ?? this.matches[0];
-  }
-
   findTipp(id: number): SingleTippDto {
     return this.singleTipps.find(x => x.matchWithResultId === id) ?? this.singleTipps[0];
   }

@@ -1,0 +1,16 @@
+<table class="table table-borderless">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Group</th>
+  </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let tipper of tippers | filterByGroup:filterString" (click)="tipperSelected.emit(tipper.id)">
+        <th scope="row">{{ tipper.id }}</th>
+        <td>{{ tipper.name }}</td>
+        <td>{{ tipper.groups }}</td>
+      </tr>
+  </tbody>
+</table>

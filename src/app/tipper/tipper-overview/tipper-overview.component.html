@@ -1,0 +1,9 @@
+<app-bs-button *ngFor="let button of buttons" [groupName]="button" (selectionChanged)="groupSelectionChanged($event)"></app-bs-button>
+<div class="row">
+  <div class="col">
+    <app-tipper-names [tippers]="tippers" [filterString]="filterString" (tipperSelected)="tipperSelected($event)"></app-tipper-names>
+  </div>
+  <div class="col">
+    <app-tipper-matches *ngIf="selectedTipperId" [name]="getTipperName()" [singleTipps]="singleTipps"></app-tipper-matches>
+  </div>
+</div>

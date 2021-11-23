@@ -1,0 +1,9 @@
+<h3>Tipps von {{ name }}</h3>
+<span>Min. Goal Diff: <input type="number" [(ngModel)]="minDiff"></span>
+<div class="row">
+  <div class="col">#</div>
+  <div class="col">Match</div>
+  <div class="col">Result</div>
+  <div class="col">Tipp</div>
+</div>
+<app-match-result *ngFor="let match of matches | goalDiff:minDiff"  [tipp]="findTipp(match.id)" [match]="match"></app-match-result>
